@@ -13,9 +13,13 @@ class MainController extends Controller
  
 	public function notification()
 	{
-		$messages = [
-			 
-		];
+		$messages = Message::all;
 		return view('subviews.notifications', compact('messages'));
+	}
+
+	public function service()
+	{
+		$services = \App\Service::all();
+		return view('services', compact('services'));
 	}
 }

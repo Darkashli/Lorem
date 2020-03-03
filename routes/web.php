@@ -13,5 +13,7 @@
 
 Route::get('/', 'MainController@index');
 Route::get('/notification', 'MainController@notification');
+Route::get('/service', 'MainController@service');
+
 
 
