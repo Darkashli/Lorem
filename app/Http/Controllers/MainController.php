@@ -8,14 +8,16 @@ class MainController extends Controller
 {
 	public function index()
 	{
-		return view('dashboard');  	
+		return view('pages.dashboard');  	
 	}
  
 	public function notification()
 	{
 		$messages = [
-			 
+			 'test' => 'your first message'
 		];
 		return view('subviews.notifications', compact('messages'));
 	}
+
+	
 }

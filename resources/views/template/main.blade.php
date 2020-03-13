@@ -19,7 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/custom.css') }}" />
 </head>
 	<header>
-		@include('template.header')
+		@include('template.header')   
 	</header>
 	
 	<body>
@@ -31,4 +31,4 @@
 	<footer>
 		@include('template.footer')
 	</footer>
-</html>
+</html>  
