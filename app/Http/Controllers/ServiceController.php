@@ -8,7 +8,7 @@ class ServiceController extends Controller
 {
     public function index()
 	{
-		$services = \App\Service::all();
+		$services = \App\Service::orderBy('name', 'desc')->get();
 
 		return view('service.index', compact('services'));
 	}

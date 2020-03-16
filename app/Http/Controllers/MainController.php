@@ -14,6 +14,6 @@ class MainController extends Controller
 	public function notification()
 	{
 		$messages = Message::all;
-		return view('subviews.notifications', compact('messages'));
+		return view('subviews.notification', compact('messages'));
 	}
 }

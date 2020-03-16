@@ -14,13 +14,15 @@
 Route::get('/', 'MainController@index');
 Route::get('/notification', 'MainController@notification');
 
-Route::get('/service', 'MainController@service');
+Route::get('/customers', 'CustomerController@index');
+Route::get('/customers/create', 'CustomerController@create');
+Route::post('/customers', 'CustomerController@store');
 
-Route::get('/service', 'ServiceController@index');
-Route::post('/service', 'ServiceController@store');
+Route::get('/services', 'ServiceController@index');
+Route::post('/services', 'ServiceController@store');
 Route::view('/about', 'pages.about');
 
 
 
 
-
+ 
