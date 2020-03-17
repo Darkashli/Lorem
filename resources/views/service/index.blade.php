@@ -3,8 +3,8 @@
 @section('title', 'Services')
 
 @section('content')
-	<h1>Welcome to our Service support</h1>
-
+	<h2>Welcome to our Service support</h2>
+	<br>
 	<form action="/services" method="POST">
 		<input type="text" name="name" autocomplete="off">
 		@csrf

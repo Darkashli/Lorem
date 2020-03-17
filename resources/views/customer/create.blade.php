@@ -4,23 +4,11 @@
 
 @section('content')
 	<h1>New Customer</h1>
-
 	<form action="/customers" method="POST">
-		<div>
-			<label for="name">Name</label>
-			<input type="text" name="name" autocomplete="off" value="{{ old('name') }}">
 
-			@error('name') <p style="color: red;">{{ $message }}</p> @enderror
-		</div>
+		@include('customer.form')
 
-		<div>
-			<label for="email">Email</label>
-			<input type="text" name="email" autocomplete="off" value="{{ old('email') }}">
+		<button>Add New Customer</button> 
 
-			@error('email') <p style="color: red;">{{ $message }}</p> @enderror
-		</div>
-		
-		@csrf
-		<button>Add New Customer</button>
 	</form>	
 @endsection
