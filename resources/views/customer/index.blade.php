@@ -3,8 +3,10 @@
 @section('title', 'Customers')
 
 @section('content')
-	<h1>Our Customers</h1>
+	<h2>Our Customers</h2>
 	<a href="/customers/create">Add New Customer</a>
+    <a href="/customers?active=1">Active</a>
+	<a href="/customers?active=0">Inactive</a>
 	<br><br>
 	<ul>
 		@forelse($customers as $customer)
@@ -16,6 +18,6 @@
 			</p></li>
 		@empty
 			<li>No Customers to show</li>
-		@endforelse 
+		@endforelse
 	</ul>
 @endsection

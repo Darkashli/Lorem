@@ -1,9 +1,9 @@
 @extends('template.main')
 
-@section('title', 'New Customer')
+@section('title', 'Edit Customer')
 
 @section('content')
-	<h1>Edit Customer</h1>
+	<h2>Edit Customer</h2>
 	<form action="/customers/{{ $customer->id }}" method="POST">
 
 		@method('PATCH')

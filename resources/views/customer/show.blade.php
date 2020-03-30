@@ -1,6 +1,6 @@
 @extends('template.main')
 
-@section('title', 'Customers')
+@section('title', 'Customer Details')
 
 @section('content')
 	<h2>Customer Details</h2>
