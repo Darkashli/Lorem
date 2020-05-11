@@ -1,7 +1,9 @@
-<div>
-	<label for="name">Name</label>
-	<input type="text" name="name" autocomplete="off" value="{{ old('name') ?? $service->name }}">
+<div class="form-group">
+    <label class="sr-only" for="service">Service</label>
+    <input type="text" class="form-control" id="service" name="service" aria-describedby="serviceHelp" placeholder="Enter Service" autocomplete="off">
+    <small id="serviceHelp" class="form-text text-muted">Add a new service here.</small>
 
-	@error('name') <p style="color: red;">{{ $message }}</p> @enderror
-</div>	
-	@csrf
+    @error('service')
+        <small class="text-danger">{{ $message }}</small>
+    @enderror
+</div>

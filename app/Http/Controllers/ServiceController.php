@@ -3,39 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Service;
+use App\Service;
 
 class ServiceController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->only('index');
+    }
+
 	public function index()
 	{
-		$services = Service::orderBy('name', 'desc')->get();
+		$services = Service::orderBy('service', 'desc')->get();
 
 		return view('service.index', compact('services'));
 	}
 
 	public function create()
 	{
-		$service = new Service();
-
-		return view('service.create', compact('service'));
+		return view('service.create');
 	}
 
 	public function store()
 	{
 		$service = Service::create($this->validatedData());
 
-		//second way
-		// $service = new \App\Service();
-		// $service->name = request('name');
-		// $service->save();
-
 		return redirect('/services');
-	}
-
-	public function show(Service $service)
-	{
-		return view('service.show', compact('service'));
 	}
 
 	public function edit(Service $service)
@@ -59,7 +52,7 @@ class ServiceController extends Controller
 	protected function validatedData()
 	{
 		return request()->validate([
-			'name' => 'required',
+			'service' => 'required',
 		]);
 	}
 }

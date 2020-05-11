@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['service'];
 
     //To turn off all mass assignment protection
-    // protected $guarded =[]; 
+    // protected $guarded =[];
+
+    public function path()
+    {
+        return url('/services/' . $this->id);
+    }
 }
