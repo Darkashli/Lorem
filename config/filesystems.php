@@ -64,6 +64,22 @@ return [
             'url' => env('AWS_URL'),
         ],
 
+        'sftp' => [
+            'driver' => 'sftp',
+            'host' => 'ftp.darkashli.nl',
+            'username' => '530995',
+            'password' => '30Kdr3!3xeOZ',
+
+            // Settings for SSH key based authentication...
+            // 'privateKey' => '/path/to/privateKey',
+            // 'password' => 'encryption-password',
+
+            // Optional SFTP Settings...
+            // 'port' => 22,
+            // 'root' => '',
+            // 'timeout' => 30,
+        ],
+
     ],
 
 ];
