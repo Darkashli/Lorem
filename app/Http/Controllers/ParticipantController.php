@@ -23,7 +23,7 @@ class ParticipantController extends Controller
 
     public function create()
     {
-        $participant = new Participant();
+        $participant = new Participant();g
 
         return view('participant.create', compact('participant'));
     }
